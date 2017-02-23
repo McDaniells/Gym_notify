@@ -12,6 +12,30 @@
     <script src="semantic/semantic.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
     <title>Dashboard Theme | Dashboard</title>
+
+
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(["init", {
+        appId: "ea5996e4-3139-4aa9-8c4c-271572e7b881",
+        autoRegister: false, /* Set to true to automatically prompt visitors */
+        subdomainName: 'gym-notify',
+        /*
+        subdomainName: Use the value you entered in step 1.4: http://imgur.com/a/f6hqN
+        */
+        httpPermissionRequest: {
+          enable: true
+        },
+        notifyButton: {
+            enable: true /* Set to false to hide */
+        }
+      }]);
+    </script>
+
+
+
   </head>
 
   <body data-page="dashboard">
@@ -23,7 +47,7 @@
       </a>
       <a class="active gray item" href="./dashboard.html">
         Dashboard
-      </a>      
+      </a>
       <a class="item" href="./products.html">
         Products
         <div class="ui label">2</div>
