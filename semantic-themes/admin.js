@@ -1,4 +1,13 @@
 $(document).ready(function() {
+
+/*----------------------------------------------------------------*/ 
+  $('.ui.rating').rating({
+      maxRating: 5            
+  });
+
+  $('.ui.rating').rating('disable');
+  
+/*----------------------------------------------------------------*/ 
   var currentDate = new Date();
 
   var dateTime = $("h1.datetime");

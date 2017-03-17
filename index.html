@@ -1,0 +1,259 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic-themes/admin.css">
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/sidebar.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/icon.min.css">
+    <!-- Remove if you don't want to use Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src="semantic-themes/admin.js"></script>
+    <script src="semantic/semantic.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Dashboard Theme | Dashboard</title>
+
+
+
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async='async'></script>
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(["init", {
+        appId: "ea5996e4-3139-4aa9-8c4c-271572e7b881",
+        autoRegister: true, /* Set to true to automatically prompt visitors */
+        subdomainName: 'gym-notify',
+        /*
+        subdomainName: Use the value you entered in step 1.4: http://imgur.com/a/f6hqN
+        */
+        httpPermissionRequest: {
+          enable: true
+        },
+        notifyButton: {
+            enable: true /* Set to false to hide */
+        }
+      }]);
+    </script>
+
+
+
+  </head>
+
+  <body data-page="dashboard">
+    <!-- Responsive sidebar menu -->
+    <div class="ui sidebar inverted vertical menu">
+      <div class="ui hidden divider"></div>          
+      <img class="ui centered small circular image" src="https://semantic-ui.com/images/wireframe/image.png">          
+      <h4 class="ui grey centered header">John Doe</h4>
+      <div class="ui hidden divider"></div>
+      <a class="item" href="./login.html">        
+        <p>Sign Out</p>
+      </a>
+      <a class="item" href="./dashboard.html">
+        Dashboard
+      </a>
+      <a class="item" href="./products.html">
+        Products
+        <div class="ui label">2</div>
+      </a>
+      <a class="item" href="./customers.html">
+        Customers
+      </a>
+    </div>
+
+    <div class="pusher">
+      <div class="ui grid container">
+        <!-- Non-responsive main left menu -->
+        <div class="ui left fixed vertical inverted menu">
+          <div class="ui hidden divider"></div>          
+          <img class="ui centered small circular image" src="https://semantic-ui.com/images/wireframe/image.png">          
+          <h4 class="ui grey centered header">John Doe</h4>
+          <div class="ui hidden divider"></div>
+          <a class="item" href="./login.html">            
+            <p>Sign Out</p>
+          </a>
+          <a class="item" href="./dashboard.html">
+            Dashboard
+          </a>
+          <a class="item" href="./products.html">
+            Products
+            <div class="ui label">2</div>
+          </a>
+          <a class="item" href="./customers.html">
+            Customers
+          </a>
+        </div>
+
+        <div class="ui grid container">
+          <!-- Responsive top menu -->
+          <div class="ui fixed inverted main menu">
+            <div class="ui container">
+              <a class="launch icon item sidebar-toggle">
+                <i class="sidebar icon"></i>
+              </a>
+            </div>
+          </div>          
+
+          <!-- Main content -->
+          <div class="centered row">            
+
+              <div class="ui statistics">
+                <div class="statistic">
+                  <div class="value">
+                    22
+                  </div>
+                  <div class="label">
+                    Faves
+                  </div>
+                </div>
+                <div class="statistic">
+                  <div class="value">
+                    31,200
+                  </div>
+                  <div class="label">
+                    Views
+                  </div>
+                </div>
+                <div class="statistic">
+                  <div class="value">
+                    22
+                  </div>
+                  <div class="label">
+                    Members
+                  </div>
+                </div>
+              </div>
+            
+          </div>
+
+
+          <h3>Productos Recomendados</h3>
+          <div class="ui five stackable cards">
+
+            <div class="card">
+              <a class="image" href="#">
+                <img src="https://semantic-ui.com/images/wireframe/image.png">
+              </a>
+              <div class="extra">
+                Rating:
+                <div class="ui star rating" data-rating="1"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a class="image" href="#">
+                <img src="https://semantic-ui.com/images/wireframe/image.png">
+              </a>
+              <div class="extra">
+                Rating:
+                <div class="ui star rating" data-rating="2"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a class="image" href="#">
+                <img src="https://semantic-ui.com/images/wireframe/image.png">
+              </a>
+              <div class="extra">
+                Rating:
+                <div class="ui star rating" data-rating="3"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a class="image" href="#">
+                <img src="https://semantic-ui.com/images/wireframe/image.png">
+              </a>
+              <div class="extra">
+                Rating:
+                <div class="ui star rating" data-rating="4"></div>
+              </div>
+            </div>
+
+            <div class="card">
+              <a class="image" href="#">
+                <img src="https://semantic-ui.com/images/wireframe/image.png">
+              </a>
+              <div class="extra">
+                Rating:
+                <div class="ui star rating" data-rating="5"></div>
+              </div>
+            </div>
+            
+            
+          </div>
+
+          <div class="ui one column row">
+              <div class="dashboard-stat column">
+                <div class="ui divided items">
+                  <div class="item">
+                    <div class="image">
+                      <img src="http://semantic-ui.com/images/wireframe/image.png">
+                    </div>
+                    <div class="content">
+                      <a class="header">12 Years a Slave</a>
+                      <div class="meta">
+                        <span class="cinema">Union Square 14</span>
+                      </div>
+                      <div class="description">
+                        <img src="http://semantic-ui.com/images/wireframe/short-paragraph.png">
+                      </div>
+                      <div class="extra">
+                        <div class="ui label">IMAX</div>
+                        <div class="ui label"><i class="globe icon"></i> Additional Languages</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="image">
+                      <img src="http://semantic-ui.com/images/wireframe/image.png">
+                    </div>
+                    <div class="content">
+                      <a class="header">My Neighbor Totoro</a>
+                      <div class="meta">
+                        <span class="cinema">IFC Cinema</span>
+                      </div>
+                      <div class="description">
+                        <img src="http://semantic-ui.com/images/wireframe/short-paragraph.png">
+                      </div>
+                      <div class="extra">
+                        <div class="ui right floated primary button">
+                          Buy tickets
+                          <i class="right chevron icon"></i>
+                        </div>
+                        <div class="ui label">Limited</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <div class="image">
+                      <img src="http://semantic-ui.com/images/wireframe/image.png">
+                    </div>
+                    <div class="content">
+                      <a class="header">Watchmen</a>
+                      <div class="meta">
+                        <span class="cinema">IFC</span>
+                      </div>
+                      <div class="description">
+                        <img src="http://semantic-ui.com/images/wireframe/short-paragraph.png">
+                      </div>
+                      <div class="extra">
+                        <div class="ui right floated primary button">
+                          Buy tickets
+                          <i class="right chevron icon"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          
+
+          <!-- Main content -->                            
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
