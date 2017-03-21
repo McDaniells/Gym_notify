@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="semantic-themes/admin.css">
+    <link rel="stylesheet" type="text/css" href="semantic/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/sidebar.min.css">
+    <link rel="stylesheet" type="text/css" href="semantic/components/icon.min.css">
+    <link rel="stylesheet" type="text/css" href="slim-scroll/slimscroll.css" />
+
+    <!-- Remove if you don't want to use Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+    <script src="semantic-themes/admin.js"></script>
+    <script src="semantic/semantic.js"></script>
+    <script src="ckeditor/ckeditor.js"></script>
+    <script src="slim-scroll/slimscroll.js"></script>
+    
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Dashboard Theme | Dashboard</title>
+  </head>
+  <body> 
+
+      <div class="ui main grid">
+        <div class="ui left fixed vertical inverted menu" id="diapositivas" style="overflow-y: scroll;">           
+          <a class="gray item">
+            <img class="ui centered circular small image" src="http://semantic-ui.com/images/wireframe/square-image.png">            
+          </a>
+          <a class="item" onclick='get_layer("dia_1")'>
+            <img class="ui centered small image" src="http://semantic-ui.com/images/wireframe/square-image.png">
+          </a>          
+        </div>
+
+        <input type="hidden" value="1" id="numb">
+        
+        <div class="fifteen wide stretched column">            
+            <textarea name="editor1" id="editor1">Escribe aqui...</textarea>
+            <div class="ui bottom attached menu">
+                <a class="item" onclick="set_layer()">
+                    add new
+                </a>
+                <a class="right item">                    
+                    Section 2                    
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+
+    $(document).ready(function() {        
+        localStorage.clear();
+    });
+
+    function set_layer(){        
+        var num = parseInt($('#numb').val());
+        var str_id = "dia_"+num;
+            
+        var data = CKEDITOR.instances.editor1.getData();
+        localStorage.setItem(str_id,data);        
+
+        num += 1;
+        var str_id = "dia_"+num;
+        $('#numb').val(num)
+        $('#diapositivas').append('<a class="item" onclick="get_layer(\''+str_id+'\')"><img class="ui centered small image" src="http://semantic-ui.com/images/wireframe/square-image.png"></a>');
+        CKEDITOR.instances.editor1.setData("");
+    }
+
+    function get_layer(diapo){
+        try {
+            var data = localStorage.getItem(diapo);
+            if(data != null){
+                console.log(data);
+                CKEDITOR.instances.editor1.setData(data);
+            }else{
+                console.log("no hay nada");
+            }
+                
+        }
+        catch(err) {
+            console.log("Esta en esa diapo");
+        }
+        
+    }
+        
+    </script>
+  </body>
+</html>

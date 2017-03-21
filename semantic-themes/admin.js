@@ -1,6 +1,8 @@
 $(document).ready(function() {
 
 /*----------------------------------------------------------------*/ 
+  CKEDITOR.replace( 'editor1' );
+  
   $('.ui.rating').rating({
       maxRating: 5            
   });
